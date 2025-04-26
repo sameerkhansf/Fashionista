@@ -49,7 +49,9 @@ export default function OrganizePage() {
                   catalog your wardrobe.
                 </p>
                 <div className="flex gap-4">
-                  <Button className="rounded-none">Connect Gmail</Button>
+                  <a href="https://mail.google.com" target="_blank" rel="noopener noreferrer">
+                    <Button className="rounded-none">Connect Gmail</Button>
+                  </a>
                   <Button variant="outline" className="rounded-none">
                     Connect Outlook
                   </Button>
