@@ -155,7 +155,7 @@ export default function AboutYou() {
         </div>
 
         <div className="pt-6 flex justify-end">
-          <Link href="/customize">
+          <Link href="/organize">
             <Button className="btn-primary flex items-center">
               Continue
               <ArrowRight size={16} className="ml-2" />
