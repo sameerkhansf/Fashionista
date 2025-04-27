@@ -19,16 +19,23 @@ export default async function Signup(props: {
   }
 
   return (
-    <>
-      <form className="flex flex-col min-w-64 max-w-64 mx-auto">
-        <h1 className="text-2xl font-medium">Sign up</h1>
-        <p className="text-sm text text-foreground">
-          Already have an account?{" "}
-          <Link className="text-primary font-medium underline" href="/sign-in">
-            Sign in
-          </Link>
-        </p>
-        <div className="flex flex-col gap-2 [&>input]:mb-3 mt-8">
+    <div className="w-full min-h-[80vh] flex items-center justify-center">
+      <form className="w-full max-w-md bg-white dark:bg-zinc-900 rounded-xl shadow-lg p-8 flex flex-col gap-6 border border-zinc-200 dark:border-zinc-800">
+        <div>
+          <h1 className="text-3xl font-semibold tracking-tight mb-2 text-center">
+            Sign up
+          </h1>
+          <p className="text-sm text-muted-foreground text-center">
+            Already have an account?{" "}
+            <Link
+              className="text-primary font-medium underline"
+              href="/sign-in"
+            >
+              Sign in
+            </Link>
+          </p>
+        </div>
+        <div className="flex flex-col gap-4 mt-2">
           <Label htmlFor="email">Email</Label>
           <Input name="email" placeholder="you@example.com" required />
           <Label htmlFor="password">Password</Label>
@@ -44,8 +51,8 @@ export default async function Signup(props: {
           </SubmitButton>
           <FormMessage message={searchParams} />
         </div>
+        <SmtpMessage />
       </form>
-      <SmtpMessage />
-    </>
+    </div>
   );
 }
