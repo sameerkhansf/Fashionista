@@ -62,11 +62,10 @@ export default function Home() {
               <div className="w-20 h-20 bg-neutral-100 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl font-light">01</span>
               </div>
-              <h3 className="text-xl font-medium mb-3">Define Your Style</h3>
+              <h3 className="text-xl font-medium mb-3">Define your profile</h3>
               <p className="text-neutral-600">
                 Answer questions about your body features, aesthetic
-                preferences, and color palette to define your unique style
-                profile.
+                preferences, and color palette to define your profile.
               </p>
             </div>
 
@@ -74,12 +73,10 @@ export default function Home() {
               <div className="w-20 h-20 bg-neutral-100 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl font-light">02</span>
               </div>
-              <h3 className="text-xl font-medium mb-3">
-                Organize Your Wardrobe
-              </h3>
+              <h3 className="text-xl font-medium mb-3">Wardrobe analysis</h3>
               <p className="text-neutral-600">
-                Import your existing clothes from email receipts or manual
-                uploads, then categorize and organize them.
+                Existing cloth uploads from email receipts or manual uploads,
+                then categorize and organize them.
               </p>
             </div>
 
