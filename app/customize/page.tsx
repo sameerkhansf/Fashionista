@@ -167,7 +167,7 @@ export default function Customize() {
             Back
           </Button>
         </Link>
-        <Link href="/organize">
+        <Link href="/wardrobe">
           <Button className="btn-primary flex items-center">
             Continue
             <ArrowRight size={16} className="ml-2" />
