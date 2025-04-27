@@ -12,6 +12,7 @@ interface ProductPurchase {
   color: string;
   size: string;
   price: string;
+  image: string;  // Added image field
 }
 
 interface Order {
@@ -91,7 +92,7 @@ export default function Wardrobe() {
               brand: order.brand,
               category,
               type,
-              image: "/placeholder.svg?height=300&width=300", // Keep placeholder image
+              image: product.image || "/placeholder.svg?height=300&width=300", // Use API image, fallback to placeholder
             };
           })
         );
@@ -186,7 +187,7 @@ export default function Wardrobe() {
                           >
                             <div className="relative h-64 overflow-hidden">
                               <Image
-                                src={item.image || "/placeholder.svg"}
+                                src={item.image}
                                 alt={item.name}
                                 fill
                                 className="object-cover group-hover:scale-105 transition-transform duration-300"
@@ -210,7 +211,7 @@ export default function Wardrobe() {
                           >
                             <div className="relative w-16 h-16 mr-4 overflow-hidden">
                               <Image
-                                src={item.image || "/placeholder.svg"}
+                                src={item.image}
                                 alt={item.name}
                                 fill
                                 className="object-cover"
@@ -251,7 +252,7 @@ export default function Wardrobe() {
                           >
                             <div className="relative h-64 overflow-hidden">
                               <Image
-                                src={item.image || "/placeholder.svg"}
+                                src={item.image}
                                 alt={item.name}
                                 fill
                                 className="object-cover group-hover:scale-105 transition-transform duration-300"
@@ -275,7 +276,7 @@ export default function Wardrobe() {
                           >
                             <div className="relative w-16 h-16 mr-4 overflow-hidden">
                               <Image
-                                src={item.image || "/placeholder.svg"}
+                                src={item.image}
                                 alt={item.name}
                                 fill
                                 className="object-cover"

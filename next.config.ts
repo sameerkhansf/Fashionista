@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
-    domains: ["images.squarespace-cdn.com", "media.discordapp.net"],
+    domains: ["images.squarespace-cdn.com", "media.discordapp.net", "picsum.photos", "www.thejacketmaker.com", "www.mrporter.com"],
   },
   /* config options here */
 };
