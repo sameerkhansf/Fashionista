@@ -9,12 +9,41 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export default function Customize() {
   const aesthetics = [
-    { name: "Minimalist", image: "/placeholder.svg?height=300&width=300" },
-    { name: "Classic", image: "/placeholder.svg?height=300&width=300" },
-    { name: "Casual", image: "/placeholder.svg?height=300&width=300" },
-    { name: "Bohemian", image: "/placeholder.svg?height=300&width=300" },
-    { name: "Streetwear", image: "/placeholder.svg?height=300&width=300" },
-    { name: "Preppy", image: "/placeholder.svg?height=300&width=300" },
+    {
+      name: "Minimalist",
+      image:
+        "https://media.discordapp.net/attachments/1365810229635317771/1365866660879405066/Screenshot_2025-04-09_at_11.03.10_PM.png?ex=680eddf4&is=680d8c74&hm=8047a40ede5b2b4b5c71a350a4774209ef241c3f88d657184bc84d53423b3743&=&width=904&height=1196",
+    },
+    {
+      name: "Classic",
+      image:
+        "https://media.discordapp.net/attachments/1365810229635317771/1365866661449695303/Screenshot_2025-04-09_at_11.18.52_PM.png?ex=680eddf4&is=680d8c74&hm=2227a21b4de513857b63c7d66bbb81a177bac1bccc964d2c23dba5f1f6fa330a&=&width=848&height=1196",
+    },
+    {
+      name: "Casual",
+      image:
+        "https://media.discordapp.net/attachments/1365810229635317771/1365866661990633482/Screenshot_2025-04-09_at_11.30.31_PM.png?ex=680eddf4&is=680d8c74&hm=264c45402541a09d5f6e1859a5e694f8179c5be099a5a2a66c9c8364b44443e9&=&width=874&height=1194",
+    },
+    {
+      name: "Bohemian",
+      image:
+        "https://media.discordapp.net/attachments/1365810229635317771/1365866662468911164/Screenshot_2025-04-09_at_11.28.25_PM.png?ex=680eddf4&is=680d8c74&hm=81711f600a0675bdca27a7b965450cf4f32bff6cc5686617df368e8a56c276f7&=&width=1016&height=1196",
+    },
+    {
+      name: "Streetwear",
+      image:
+        "https://media.discordapp.net/attachments/1365810229635317771/1365866663001591980/Screenshot_2025-04-09_at_11.16.14_PM.png?ex=680eddf5&is=680d8c75&hm=0024c5d1622125f52420bc019c17d925394c0a6ec97d5db992a6627537735895&=&width=836&height=1196",
+    },
+    {
+      name: "Preppy",
+      image:
+        "https://media.discordapp.net/attachments/1365810229635317771/1365866663349715064/IMG_2218.jpg?ex=680eddf5&is=680d8c75&hm=f1b57812f45a1a3efab1c79b9477675251d5cca6166e0376bee9d6c9b66d815f&=&width=796&height=1196",
+    },
+    {
+      name: "Extra",
+      image:
+        "https://media.discordapp.net/attachments/1365810229635317771/1365866663727206510/Screenshot_2025-04-09_at_11.21.01_PM.png?ex=680eddf5&is=680d8c75&hm=03c64410bc787e59facf4d1db92a1e194af14ef34d93e710904a1efad377820f&=&width=1214&height=1196",
+    },
   ];
 
   const colorPalettes = [
