@@ -39,11 +39,11 @@ export default function Customize() {
       image:
         "https://media.discordapp.net/attachments/1365810229635317771/1365866663349715064/IMG_2218.jpg?ex=680eddf5&is=680d8c75&hm=f1b57812f45a1a3efab1c79b9477675251d5cca6166e0376bee9d6c9b66d815f&=&width=796&height=1196",
     },
-    {
-      name: "Extra",
-      image:
-        "https://media.discordapp.net/attachments/1365810229635317771/1365866663727206510/Screenshot_2025-04-09_at_11.21.01_PM.png?ex=680eddf5&is=680d8c75&hm=03c64410bc787e59facf4d1db92a1e194af14ef34d93e710904a1efad377820f&=&width=1214&height=1196",
-    },
+    // {
+    //   name: "Extra",
+    //   image:
+    //     "https://media.discordapp.net/attachments/1365810229635317771/1365866663727206510/Screenshot_2025-04-09_at_11.21.01_PM.png?ex=680eddf5&is=680d8c75&hm=03c64410bc787e59facf4d1db92a1e194af14ef34d93e710904a1efad377820f&=&width=1214&height=1196",
+    // },
   ];
 
   const colorPalettes = [
