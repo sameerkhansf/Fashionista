@@ -24,7 +24,7 @@ export default function YourLook() {
       id: 1,
       name: "Casual Elegance",
       items: ["Blue T-Shirt", "Blue Trousers", "White Sneakers"],
-      image: "https://media.discordapp.net/attachments/1365810229635317771/1365885924130689065/Screenshot_2025-04-26_at_8.00.38_PM.png?ex=680eefe5&is=680d9e65&hm=d3b3dd60546443e68a50988893f2fad39772571ccc4849d74d16c9ae6a5729dc&=&format=webp&quality=lossless&width=726&height=1450",
+      image: "https://media.discordapp.net/attachments/1365810229635317771/1365893075506958357/rec_image.jpg?ex=680ef68e&is=680da50e&hm=e8568c338f92e1dfcc5ce584997e489d91e50433297f5c2c5df3890b7818812a&=&format=webp&width=1934&height=1450",
     },
     {
       id: 2,
