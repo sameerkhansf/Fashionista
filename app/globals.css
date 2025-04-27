@@ -2,6 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+  font-feature-settings: "ss01", "ss03";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: 0.05em;
+}
+
+.hero-section {
+  background-color: #f8f7f4;
+}
+
+.section-title {
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.btn-primary {
+  @apply bg-neutral-900 text-white px-6 py-3 text-sm uppercase tracking-wider hover:bg-neutral-800 transition-colors;
+}
+
+.btn-secondary {
+  @apply border border-neutral-900 text-neutral-900 px-6 py-3 text-sm uppercase tracking-wider hover:bg-neutral-100 transition-colors;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;

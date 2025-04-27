@@ -28,12 +28,6 @@ export default function Header() {
             Customize
           </Link>
           <Link
-            href="/organize"
-            className="text-sm uppercase hover:text-muted-foreground transition-colors"
-          >
-            Organize
-          </Link>
-          <Link
             href="/recommendations"
             className="text-sm uppercase hover:text-muted-foreground transition-colors"
           >
