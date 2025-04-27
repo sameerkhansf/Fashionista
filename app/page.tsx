@@ -39,7 +39,7 @@ export default function Home() {
             </div>
             <div className="relative h-[400px] md:h-[500px]">
               <Image
-                src="/placeholder.svg?height=500&width=400"
+                src="https://images.squarespace-cdn.com/content/v1/630f9449e9d3ae151b3599d3/1662514164101-Q92URWUY93EEM8A1OAN2/starter-capsule-wardrobe-for-men.jpg"
                 alt="Capsule wardrobe showcase"
                 fill
                 className="object-cover"
