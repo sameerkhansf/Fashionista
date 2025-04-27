@@ -8,19 +8,65 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
+interface ProductPurchase {
+  name: string;
+  color: string;
+  size: string;
+  price: string;
+}
+
+interface Order {
+  order_number: string;
+  brand: string;
+  order_date: string;
+  website: string;
+  location_bought: string;
+  product_purchases: ProductPurchase[];
+}
+
+interface FetchOrdersResponse {
+  result: string;
+  orders: Order[];
+}
+
 export default function Organize() {
   const [uploadedItems, setUploadedItems] = useState<string[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleEmailConnect = () => {
-    // Simulate email connection
-    setTimeout(() => {
-      setUploadedItems([
-        "Black T-Shirt - Zara",
-        "Beige Trousers - COS",
-        "Navy Blazer - Massimo Dutti",
-        "White Sneakers - Common Projects",
-      ]);
-    }, 1500);
+  const handleEmailConnect = async () => {
+    setIsLoading(true);
+    setError(null);
+
+    try {
+      const response = await fetch("http://127.0.0.1:8000/fetch_orders", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to fetch orders");
+      }
+
+      const data: FetchOrdersResponse = await response.json();
+      const orders = data.orders || [];
+
+      // Map the nested product_purchases to the format expected by uploadedItems
+      const items = orders.flatMap((order: Order) =>
+        order.product_purchases.map((product: ProductPurchase) => {
+          const details = [product.color, product.size].filter(Boolean).join(", ");
+          return `${product.name} - ${order.brand}${details ? ` (${details})` : ""}`;
+        })
+      );
+      setUploadedItems(items);
+    } catch (err) {
+      setError("Failed to connect to email and fetch orders. Please try again.");
+      console.error(err);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleManualUpload = () => {
@@ -65,8 +111,15 @@ export default function Organize() {
                 We'll scan your email for purchase receipts to automatically
                 import your wardrobe items.
               </p>
-              <Button onClick={handleEmailConnect} className="btn-primary">
-                Connect Email
+              {error && (
+                <p className="text-red-500 mb-4">{error}</p>
+              )}
+              <Button
+                onClick={handleEmailConnect}
+                className="btn-primary"
+                disabled={isLoading}
+              >
+                {isLoading ? "Connecting..." : "Connect Email"}
               </Button>
             </div>
           </TabsContent>
