@@ -10,35 +10,12 @@ export default function YourLook() {
   const recommendations = [
     {
       id: 1,
-      name: "Camel Coat",
-      brand: "COS",
-      price: 250,
-      image: "/placeholder.svg?height=300&width=300",
-      reason: "Completes your essential outerwear collection",
-    },
-    {
-      id: 2,
-      name: "Silk Blouse",
-      brand: "Everlane",
-      price: 120,
-      image: "/placeholder.svg?height=300&width=300",
-      reason: "Adds versatility to your workwear options",
-    },
-    {
-      id: 3,
-      name: "Leather Belt",
-      brand: "Massimo Dutti",
-      price: 80,
-      image: "/placeholder.svg?height=300&width=300",
-      reason: "Elevates your casual and formal outfits",
-    },
-    {
-      id: 4,
-      name: "Cashmere Sweater",
-      brand: "Uniqlo",
-      price: 150,
-      image: "/placeholder.svg?height=300&width=300",
-      reason: "Perfect layering piece for your style",
+      name: "Suede Jacket",
+      brand: "Mr. Porter",
+      price: 395,
+      image: "https://www.mrporter.com/variants/images/1647597344106617/in/w1500_q60.jpg",
+      reason: "Goes well with your existing wardrobe",
+      link: "https://www.mrporter.com/en-us/mens/product/mr-p/clothing/leather-jackets/suede-jacket/1647597344106617",
     },
   ];
 
@@ -46,14 +23,20 @@ export default function YourLook() {
     {
       id: 1,
       name: "Casual Elegance",
-      items: ["Black T-Shirt", "Beige Trousers", "White Sneakers"],
-      image: "/placeholder.svg?height=400&width=300",
+      items: ["Blue T-Shirt", "Blue Trousers", "White Sneakers"],
+      image: "https://media.discordapp.net/attachments/1365810229635317771/1365885924130689065/Screenshot_2025-04-26_at_8.00.38_PM.png?ex=680eefe5&is=680d9e65&hm=d3b3dd60546443e68a50988893f2fad39772571ccc4849d74d16c9ae6a5729dc&=&format=webp&quality=lossless&width=726&height=1450",
     },
     {
       id: 2,
       name: "Business Casual",
-      items: ["Olive Shirt", "Navy Blazer", "Beige Trousers"],
-      image: "/placeholder.svg?height=400&width=300",
+      items: ["Neutral T-Shirt", "Blue Trousers", "Business Casual Sneakers"],
+      image: "https://media.discordapp.net/attachments/1365810229635317771/1365885924436869130/Screenshot_2025-04-26_at_8.00.43_PM.png?ex=680eefe5&is=680d9e65&hm=282abd5b5cca32f980e91ee4d422e279359eca4fdca9dda97de8c843b2acb60c&=&format=webp&quality=lossless&width=726&height=1450",
+    },
+    {
+      id: 3,
+      name: "Date Night",
+      items: ["White T-Shirt", "Blue Trousers", "Black Sneakers"],
+      image: "https://media.discordapp.net/attachments/1365810229635317771/1365885925040853076/Screenshot_2025-04-26_at_8.00.55_PM.png?ex=680eefe5&is=680d9e65&hm=f579c7a864b586099bbe129a47364d715b62acbdcb3c8f2dfefe648f378350e8&=&format=webp&quality=lossless&width=761&height=1448",
     },
   ];
 
@@ -85,40 +68,45 @@ export default function YourLook() {
 
         <TabsContent value="recommendations" className="space-y-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {recommendations.map((item) => (
-              <div
-                key={item.id}
-                className="border border-neutral-200 flex flex-col md:flex-row"
-              >
-                <div className="relative w-full md:w-1/3 h-64 md:h-auto">
-                  <Image
-                    src={item.image || "/placeholder.svg"}
-                    alt={item.name}
-                    fill
-                    className="object-cover"
-                  />
+          {recommendations.map((item) => (
+            <div
+              key={item.id}
+              className="border border-neutral-200 flex flex-col md:flex-row"
+            >
+              <div className="relative w-full md:w-1/3 h-64 md:h-auto">
+                <Image
+                  src={item.image || "/placeholder.svg"}
+                  alt={item.name}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6 flex flex-col justify-between flex-1">
+                <div>
+                  <h3 className="font-medium text-lg mb-1">{item.name}</h3>
+                  <p className="text-neutral-500 mb-4">{item.brand}</p>
+                  <p className="text-neutral-600 mb-2">${item.price}</p>
+                  <p className="text-sm text-neutral-500 italic">
+                    "{item.reason}"
+                  </p>
                 </div>
-                <div className="p-6 flex flex-col justify-between flex-1">
-                  <div>
-                    <h3 className="font-medium text-lg mb-1">{item.name}</h3>
-                    <p className="text-neutral-500 mb-4">{item.brand}</p>
-                    <p className="text-neutral-600 mb-2">${item.price}</p>
-                    <p className="text-sm text-neutral-500 italic">
-                      "{item.reason}"
-                    </p>
-                  </div>
-                  <div className="mt-6 flex space-x-3">
-                    <Button className="btn-primary flex-1 flex items-center justify-center">
-                      <Plus size={16} className="mr-2" />
-                      Add to Cart
-                    </Button>
-                    <Button variant="outline" className="btn-secondary">
-                      Save
-                    </Button>
-                  </div>
+                <div className="mt-6 flex space-x-3">
+                  <a
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-primary flex-1 flex items-center justify-center text-center"
+                  >
+                    <Plus size={16} className="mr-2" />
+                    Buy Now
+                  </a>
+                  <Button variant="outline" className="btn-secondary">
+                    Save
+                  </Button>
                 </div>
               </div>
-            ))}
+            </div>
+          ))}
           </div>
         </TabsContent>
 
@@ -131,7 +119,7 @@ export default function YourLook() {
                     src={outfit.image || "/placeholder.svg"}
                     alt={outfit.name}
                     fill
-                    className="object-cover"
+                    className="object-contain"
                   />
                 </div>
                 <div className="p-6">
